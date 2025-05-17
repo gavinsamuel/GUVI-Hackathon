@@ -14,19 +14,19 @@ Key features include:
 - Hosting an interactive chatbot interface via **Gradio**.
 
 ---
-Installation
+#Installation
 
 Set up the project environment by installing all required dependencies. You will need Python 3.8 or higher. Libraries include NLTK, spaCy, Gradio, TensorFlow, Transformers, Matplotlib, Seaborn, NumPy, Pandas, scikit-learn, and joblib. Additionally, download the English language model for spaCy to enable text preprocessing.
 
-Dataset
+#Dataset
 
 The model requires a labeled dataset of customer support queries paired with their corresponding intents. The dataset should be formatted with at least two columns: one for the user query and one for the intent label. This structured data serves as the foundation for training the chatbot’s intent classification model.
 
-Preprocessing
+#Preprocessing
 
 Preprocessing involves cleaning and normalizing the text data to enhance model performance. The text undergoes tokenization, lemmatization, and stopword removal, utilizing tools such as NLTK and spaCy. Features are then extracted using the TF-IDF vectorization method. Labels are encoded for compatibility with machine learning algorithms, and the dataset is split into training and testing subsets for model evaluation.
 
-Model Architecture
+#Model Architecture
 
 The chatbot’s intent classification is approached using two complementary methods:
 
@@ -34,23 +34,23 @@ A Random Forest Classifier applied to TF-IDF vectorized text as a strong baselin
 BERT embeddings extracted through the Hugging Face Transformers library, which provide contextualized word representations that capture semantic nuances. These embeddings can then be fed into a neural network classifier built with TensorFlow.
 This hybrid approach leverages classical ML simplicity and transformer-based contextual power.
 
-Training
+#Training
 
 Training encompasses fitting the models to the processed dataset. The Random Forest model is trained on the TF-IDF vectors to learn intent classification boundaries. Alternatively, a deep neural network is trained on BERT embeddings with dropout and dense layers to improve generalization. Hyperparameters such as learning rate, batch size, and epochs are tuned to optimize performance.
 
-Evaluation
+#Evaluation
 
 Model evaluation is conducted using standard classification metrics including precision, recall, F1-score, and accuracy. The sklearn library facilitates generation of detailed classification reports to analyze performance per intent class. Visualization of results through Matplotlib and Seaborn aids in understanding model strengths and areas for improvement.
 
-Deployment
+#Deployment
 
 The trained chatbot model is deployed as an interactive web interface using Gradio. This interface accepts user text input, processes it through the preprocessing and prediction pipeline, and returns contextually appropriate responses mapped from the predicted intent. The deployment supports easy local hosting and can be extended for cloud or public deployment.
 
-Usage
+#Usage
 
 To use the chatbot, launch the project’s main script or notebook which initializes the Gradio interface. The user inputs queries into the provided text box and receives intent-aware, predefined responses from the chatbot. This interface simplifies end-user interaction and testing during development.
 
-Future Work
+#Future Work
 
 Potential extensions to enhance this project include:
 
