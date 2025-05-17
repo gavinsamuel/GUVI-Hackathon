@@ -25,6 +25,7 @@ The model requires a labeled dataset of customer support queries paired with the
 # Preprocessing
 
 Preprocessing involves cleaning and normalizing the text data to enhance model performance. The text undergoes tokenization, lemmatization, and stopword removal, utilizing tools such as NLTK and spaCy. Features are then extracted using the TF-IDF vectorization method. Labels are encoded for compatibility with machine learning algorithms, and the dataset is split into training and testing subsets for model evaluation.
+https://drive.google.com/file/d/18oqIylHaEuq3aD8NJMXNHWkdgDjlALrb/view?usp=sharing
 
 #Model Architecture
 
